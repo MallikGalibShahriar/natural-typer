@@ -6,7 +6,7 @@
     <title>Natural Typer | Professional Screencast Tool</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;500&family=Fira+Code:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fira+Sans:wght@300;400;600&family=Hind+Siliguri:wght@300;400;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans:wght@300;400;600&family=Nunito+Sans:wght@300;400;600&family=Outfit:wght@300;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -61,17 +61,47 @@
                 <div class="control-group">
                     <label for="fontSelect">Font Family</label>
                     <select id="fontSelect">
-                        <option value="'Fira Code', monospace">Fira Code</option>
-                        <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
-                        <option value="'Roboto Mono', monospace">Roboto Mono</option>
-                        <option value="monospace">System Mono</option>
+                        <optgroup label="Monospace (Code)">
+                            <option value="'Fira Code', monospace">Fira Code</option>
+                            <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+                            <option value="'Roboto Mono', monospace">Roboto Mono</option>
+                            <option value="monospace">System Mono</option>
+                        </optgroup>
+                        <optgroup label="Sans Serif (Text)">
+                            <option value="'Nunito Sans', sans-serif">Nunito Sans</option>
+                            <option value="'Noto Sans', sans-serif">Noto Sans</option>
+                            <option value="'Fira Sans', sans-serif">Fira Sans</option>
+                            <option value="'Hind Siliguri', sans-serif">Hind Siliguri (Bangla)</option>
+                        </optgroup>
                     </select>
                 </div>
                 <div class="control-group">
                     <label for="themeSelect">Theme</label>
                     <select id="themeSelect">
-                        <option value="dark">Dark Mode</option>
-                        <option value="light">Light Mode</option>
+                        <optgroup label="Dark">
+                            <option value="dark">GitHub Dark (Default)</option>
+                            <option value="dracula">Dracula</option>
+                            <option value="nord">Nordic Frost</option>
+                            <option value="midnight">Midnight Blue</option>
+                            <option value="forest">Enchanted Forest</option>
+                            <option value="synthwave">Synthwave '84</option>
+                        </optgroup>
+                        <optgroup label="Light">
+                            <option value="light">Clean Light</option>
+                            <option value="solarized">Solarized Light</option>
+                            <option value="rose">Rose Pine Dawn</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="windowStyleSelect">Window Style</label>
+                    <select id="windowStyleSelect">
+                        <option value="macos">macOS (Default)</option>
+                        <option value="windows">Windows 11</option>
+                        <option value="linux">Linux Mint</option>
+                        <option value="pop">Pop!_OS</option>
+                        <option value="cyber">Cyberpunk</option>
+                        <option value="minimal">Minimal Pro</option>
                     </select>
                 </div>
                 <div class="control-group">
@@ -101,7 +131,7 @@
             </footer>
         </section>
 
-        <section class="display-panel">
+        <section class="display-panel" data-style="macos">
             <div class="output-header">
                 <div class="window-controls">
                     <span></span>

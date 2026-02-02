@@ -19,19 +19,128 @@
     --textarea-bg: rgba(0, 0, 0, 0.2);
 }
 
+/* --- THEMES --- */
+
+/* 1. Improved Light Theme */
 [data-theme="light"] {
-    --bg-color: #f8fafc;
+    --bg-color: #f0f4f8; /* Softer blue-grey */
     --window-bg: #ffffff;
-    --header-bg: #f1f5f9;
-    --card-bg: #ffffff;
-    --border-color: #cbd5e1;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
+    --header-bg: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --border-color: #e2e8f0;
+    --text-primary: #1e293b; /* Much darker for better contrast */
+    --text-secondary: #64748b;
     --accent-color: #2563eb;
-    --accent-glow: rgba(37, 99, 235, 0.1);
-    --blob-opacity: 0.1;
-    --header-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    --textarea-bg: #ffffff;
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    --blob-opacity: 0.15;
+    --header-gradient: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    --textarea-bg: #f1f5f9;
+}
+
+/* 2. Dracula */
+[data-theme="dracula"] {
+    --bg-color: #282a36;
+    --window-bg: #282a36;
+    --header-bg: #44475a;
+    --card-bg: rgba(40, 42, 54, 0.95);
+    --border-color: #6272a4;
+    --text-primary: #f8f8f2;
+    --text-secondary: #bd93f9;
+    --accent-color: #ff79c6;
+    --accent-glow: rgba(255, 121, 198, 0.3);
+    --header-gradient: linear-gradient(135deg, #ff79c6 0%, #bd93f9 100%);
+    --textarea-bg: rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Nordic Frost */
+[data-theme="nord"] {
+    --bg-color: #2e3440;
+    --window-bg: #3b4252;
+    --header-bg: #434c5e;
+    --card-bg: rgba(59, 66, 82, 0.95);
+    --border-color: #4c566a;
+    --text-primary: #eceff4;
+    --text-secondary: #d8dee9;
+    --accent-color: #88c0d0;
+    --accent-glow: rgba(136, 192, 208, 0.3);
+    --header-gradient: linear-gradient(135deg, #88c0d0 0%, #81a1c1 100%);
+    --textarea-bg: rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Midnight Blue */
+[data-theme="midnight"] {
+    --bg-color: #020617;
+    --window-bg: #0f172a;
+    --header-bg: #1e293b;
+    --card-bg: rgba(15, 23, 42, 0.95);
+    --border-color: #334155;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    --header-gradient: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    --textarea-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* 5. Enchanted Forest */
+[data-theme="forest"] {
+    --bg-color: #051a15;
+    --window-bg: #0a2921;
+    --header-bg: #0f3d32;
+    --card-bg: rgba(10, 41, 33, 0.95);
+    --border-color: #1b5e4f;
+    --text-primary: #e8f5e9;
+    --text-secondary: #a5d6a7;
+    --accent-color: #66bb6a;
+    --accent-glow: rgba(102, 187, 106, 0.3);
+    --header-gradient: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+    --textarea-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* 6. Synthwave '84 */
+[data-theme="synthwave"] {
+    --bg-color: #241b2f;
+    --window-bg: #262335;
+    --header-bg: #34234f;
+    --card-bg: rgba(38, 35, 53, 0.95);
+    --border-color: #49306b;
+    --text-primary: #fff7f9;
+    --text-secondary: #b39bd8;
+    --accent-color: #ff00de;
+    --accent-glow: rgba(255, 0, 222, 0.5);
+    --blob-opacity: 0.4; /* Stronger blobs */
+    --header-gradient: linear-gradient(135deg, #ff00de 0%, #00fff2 100%);
+    --textarea-bg: rgba(0, 0, 0, 0.4);
+}
+
+/* 7. Solarized Light */
+[data-theme="solarized"] {
+    --bg-color: #fdf6e3;
+    --window-bg: #eee8d5;
+    --header-bg: #e6dfc4;
+    --card-bg: rgba(238, 232, 213, 0.95);
+    --border-color: #d3cbb1;
+    --text-primary: #586e75;
+    --text-secondary: #93a1a1;
+    --accent-color: #b58900;
+    --accent-glow: rgba(181, 137, 0, 0.2);
+    --header-gradient: linear-gradient(135deg, #b58900 0%, #cb4b16 100%);
+    --textarea-bg: rgba(255, 255, 255, 0.4);
+}
+
+/* 8. Rose Pine Dawn */
+[data-theme="rose"] {
+    --bg-color: #faf4ed;
+    --window-bg: #fffaf3;
+    --header-bg: #f2e9e1;
+    --card-bg: rgba(255, 250, 243, 0.95);
+    --border-color: #e6e0d9;
+    --text-primary: #575279;
+    --text-secondary: #797593;
+    --accent-color: #d7827e;
+    --accent-glow: rgba(215, 130, 126, 0.2);
+    --header-gradient: linear-gradient(135deg, #d7827e 0%, #ea9d34 100%);
+    --textarea-bg: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -237,34 +346,26 @@ input[type="range"] {
 select {
     width: 100%;
     padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     color: var(--text-primary);
     font-family: var(--font-sans);
     cursor: pointer;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1em;
 }
 
-select option {
-    background-color: #161b22;
-    color: #e6edf3;
+select option, select optgroup {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
 }
 
-[data-theme="light"] select {
-    background-color: #fff;
-    color: #1f2328;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-}
-
-[data-theme="light"] select option {
-    background-color: #fff;
-    color: #1f2328;
-}
+/* Force light arrow in dark themes if needed, or rely on currentColor which picks up text-primary */
+/* currentColor is robust for both light and dark provided text-primary is correct */
 
 .button-group {
     display: flex;
@@ -386,15 +487,102 @@ button {
     gap: 6px;
 }
 
-.window-controls span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+/* Window Styles Logic */
+
+/* Default (macOS) - already defined above, but we enforce it */
+[data-style="macos"] .window-controls { gap: 8px; }
+[data-style="macos"] .window-controls span { width: 12px; height: 12px; border-radius: 50%; }
+[data-style="macos"] .window-controls span:nth-child(1) { background: #ff5f56; }
+[data-style="macos"] .window-controls span:nth-child(2) { background: #ffbd2e; }
+[data-style="macos"] .window-controls span:nth-child(3) { background: #27c93f; }
+
+/* Windows 11 Style */
+[data-style="windows"] .output-header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+[data-style="windows"] .window-controls {
+    gap: 0;
+}
+[data-style="windows"] .window-controls span {
+    width: 46px;
+    height: 32px;
+    border-radius: 0;
+    position: relative;
+    background: transparent;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary); /* Ensure icon color matches theme text */
+}
+/* Windows Icons using pseudo elements */
+[data-style="windows"] .window-controls span:nth-child(1)::before { content: '×'; font-size: 20px; font-weight: 300; } /* Close */
+[data-style="windows"] .window-controls span:nth-child(2)::before { content: '□'; font-size: 14px; } /* Maximize */
+[data-style="windows"] .window-controls span:nth-child(3)::before { content: '-'; font-size: 20px; } /* Minimize */
+
+/* Order fix for windows: Min, Max, Close */
+[data-style="windows"] .window-controls span:nth-child(1) { order: 3; }
+[data-style="windows"] .window-controls span:nth-child(2) { order: 2; }
+[data-style="windows"] .window-controls span:nth-child(3) { order: 1; }
+
+[data-style="windows"] .window-controls span:hover { background: rgba(255, 255, 255, 0.1); }
+[data-style="windows"] .window-controls span:nth-child(1):hover { background: #e81123; color: white; }
+
+/* Linux Mint */
+[data-style="linux"] .output-header { background: linear-gradient(to bottom, #404040, #2f2f2f); border-bottom: 1px solid #202020; }
+[data-style="linux"] .window-controls span { width: 14px; height: 14px; border-radius: 50%; background: #8fae3c; border: 1px solid #6b842a; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+
+/* Pop!_OS */
+[data-style="pop"] .output-header { background: #333333; }
+[data-style="pop"] .display-panel { border-radius: 8px 8px 0 0; }
+[data-style="pop"] .window-title { font-weight: 700; color: #f6f6f6; }
+[data-style="pop"] .window-controls span { border-radius: 4px; background: #ed5f5c; }
+[data-style="pop"] .window-controls span:nth-child(2) { background: #fdbd2c; }
+[data-style="pop"] .window-controls span:nth-child(3) { background: #60c541; }
+
+/* Cyberpunk */
+[data-style="cyber"] .display-panel { 
+    border: 1px solid #00f0ff; 
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2); 
+    border-radius: 0;
+}
+[data-style="cyber"] .output-header {
+    background: #000;
+    border-bottom: 1px solid #00f0ff;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 98% 100%, 0 100%);
+}
+[data-style="cyber"] .window-controls span {
+    width: 20px; height: 8px; border-radius: 0; background: #fe0000;
+}
+[data-style="cyber"] .window-controls span:nth-child(2) { background: #fcee0a; }
+[data-style="cyber"] .window-controls span:nth-child(3) { background: #00f0ff; }
+[data-style="cyber"] .window-title {
+    color: #fcee0a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #fcee0a;
 }
 
-.window-controls span:nth-child(1) { background: #ff5f56; }
-.window-controls span:nth-child(2) { background: #ffbd2e; }
-.window-controls span:nth-child(3) { background: #27c93f; }
+/* Minimal Pro */
+[data-style="minimal"] .output-header { background: transparent; padding-bottom: 0; }
+[data-style="minimal"] .window-controls { opacity: 0.3; transition: opacity 0.3s; }
+[data-style="minimal"] .output-header:hover .window-controls { opacity: 1; }
+[data-style="minimal"] .window-controls span { background: var(--text-primary); width: 6px; height: 6px; }
+
+/* Light Theme Visibility Overrides for Window Styles */
+[data-theme="light"][data-style="windows"] .window-controls span:hover,
+[data-theme="solarized"][data-style="windows"] .window-controls span:hover,
+[data-theme="rose"][data-style="windows"] .window-controls span:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"][data-style="cyber"] .window-title,
+[data-theme="solarized"][data-style="cyber"] .window-title,
+[data-theme="rose"][data-style="cyber"] .window-title {
+    color: #d60000;
+    text-shadow: 0 0 5px rgba(214, 0, 0, 0.5);
+}
 
 .window-title {
     flex: 1;

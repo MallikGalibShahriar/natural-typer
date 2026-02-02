@@ -15,6 +15,7 @@ const copyBtn = document.getElementById('copyBtn');
 
 const fontSelect = document.getElementById('fontSelect');
 const themeSelect = document.getElementById('themeSelect');
+const windowStyleSelect = document.getElementById('windowStyleSelect');
 const fontSizeInput = document.getElementById('fontSize');
 const fontSizeValue = document.getElementById('fontSizeValue');
 const marginLeftInput = document.getElementById('marginLeft');
@@ -111,6 +112,11 @@ marginLeftInput.addEventListener('input', () => {
 marginRightInput.addEventListener('input', () => {
     marginRightValue.innerText = `${marginRightInput.value}%`;
     document.documentElement.style.setProperty('--margin-right', `${marginRightInput.value}%`);
+});
+
+windowStyleSelect.addEventListener('change', () => {
+    const displayPanel = document.querySelector('.display-panel');
+    displayPanel.setAttribute('data-style', windowStyleSelect.value);
 });
 
 soundVolumeInput.addEventListener('input', () => {
