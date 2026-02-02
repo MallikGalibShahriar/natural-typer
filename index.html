@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Typer | Professional Screencast Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;500&family=Fira+Code:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container" data-theme="dark">
+        
+        <section id="configPanel" class="config-panel hidden">
+            <button id="closeConfigBtn" class="close-config-btn" title="Close Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <header id="appHeader">
+                <h1>Natural Typer</h1>
+                <p>Type like a pro for your screencasts.</p>
+            </header>
+
+            <div class="input-group">
+                <label for="sourceText">Input Text</label>
+                <textarea id="sourceText" placeholder="Paste your text here...">Welcome to Natural Typer. This tool is designed to help you create perfect screen recordings. Whether you are recording a coding tutorial or a product demo, Natural Typer ensures your typing looks professional and human.</textarea>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="typingSpeed">Speed (ms)</label>
+                    <input type="range" id="typingSpeed" min="20" max="200" value="80">
+                    <span id="speedValue">80ms</span>
+                </div>
+                <div class="control-group">
+                    <label for="mistakeRate">Mistakes (%)</label>
+                    <input type="range" id="mistakeRate" min="0" max="20" value="5">
+                    <span id="mistakeValue">5%</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <input type="checkbox" id="soundEnabled" style="width: auto; margin: 0;">
+                    <label for="soundEnabled" style="margin: 0;">Type Sound</label>
+                </div>
+                <div class="control-group">
+                    <label for="soundVolume">Volume</label>
+                    <input type="range" id="soundVolume" min="0" max="100" value="20">
+                    <span id="volumeValue">20%</span>
+                </div>
+            </div>
+
+            <div class="controls secondary-controls">
+                <div class="control-group">
+                    <label for="fontSelect">Font Family</label>
+                    <select id="fontSelect">
+                        <option value="'Fira Code', monospace">Fira Code</option>
+                        <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+                        <option value="'Roboto Mono', monospace">Roboto Mono</option>
+                        <option value="monospace">System Mono</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="themeSelect">Theme</label>
+                    <select id="themeSelect">
+                        <option value="dark">Dark Mode</option>
+                        <option value="light">Light Mode</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="fontSize">Font Size</label>
+                    <input type="range" id="fontSize" min="14" max="48" value="24">
+                    <span id="fontSizeValue">24px</span>
+                </div>
+                <div class="control-group">
+                    <label for="marginRight">Right Margin (%)</label>
+                    <input type="range" id="marginRight" min="0" max="40" value="15">
+                    <span id="marginRightValue">15%</span>
+                </div>
+                <div class="control-group">
+                    <label for="marginLeft">Left Margin (%)</label>
+                    <input type="range" id="marginLeft" min="0" max="40" value="5">
+                    <span id="marginLeftValue">5%</span>
+                </div>
+                <div class="button-group">
+                    <button id="startBtn" class="btn-primary">Start (Space)</button>
+                    <button id="pauseBtn" class="btn-secondary" disabled>Pause (Space)</button>
+                    <button id="resetBtn" class="btn-outline">Reset</button>
+                </div>
+            </div>
+
+            <footer class="settings-footer">
+                <p>&copy; 2026 Natural Typer. Built by <a href="https://www.linkedin.com/in/mallikgalibshahriar/" target="_blank">Mallik Galib Shahriar</a></p>
+            </footer>
+        </section>
+
+        <section class="display-panel">
+            <div class="output-header">
+                <div class="window-controls">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="window-title">Notepad.txt</div>
+                <button id="copyBtn" class="copy-btn">Copy</button>
+                <button id="toggleConfig" class="toggle-config-btn" title="Settings (Esc)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </button>
+            </div>
+            <div class="output-container"><span id="output" class="typing-area"></span><span class="cursor"></span></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
